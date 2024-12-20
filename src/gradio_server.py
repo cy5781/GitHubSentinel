@@ -32,6 +32,12 @@ demo = gr.Interface(
         gr.Slider(value=2, minimum=1, maximum=7, step=1, label="报告周期", info="生成项目过去一段时间进展，单位：天"),
         # 滑动条选择报告的时间范围
     ],
+    examples=[
+        [45, "1天", 3],
+        [3.14, "2天", 2],
+        [144, "3天", 2.5],
+        [0, "7天", 1.2],
+    ],
     outputs=[gr.Markdown(), gr.File(label="下载报告")],  # 输出格式：Markdown文本和文件下载
 )
 
